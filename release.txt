@@ -1,0 +1,3 @@
+Fat Cat Theme Child
+
+1.0.0 Initial release
