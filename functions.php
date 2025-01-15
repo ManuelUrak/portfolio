@@ -195,6 +195,22 @@ function fc_theme_child_register_blocks() {
 				'loop'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'conditions',
+			'title' => 'Conditions',
+			'render_template' => 'template-parts/blocks/block-conditions.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'conditions'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -204,6 +220,7 @@ add_action('init', 'fc_theme_child_register_blocks');
 function fc_theme_child_allowed_block_types(){
 	$allowed_blocks = array(
 		'acf/about-me',
+		'acf/conditions',
 		'acf/parallax',
 		'acf/post-loop',
 		'acf/services',
