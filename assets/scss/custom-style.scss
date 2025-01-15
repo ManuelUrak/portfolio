@@ -1008,7 +1008,6 @@ section:not(.hero-section){
 
 .parallax-section{
 	overflow-x: hidden;
-    background-image: url(../imgs/parallax.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1017,7 +1016,7 @@ section:not(.hero-section){
 	position: absolute;
 	left: 0;
 	width: 100% !important;
-	max-width: 2000px !important;
+	max-width: 99999px !important;
 	margin-top: 100px !important;
 
 	.overlay{

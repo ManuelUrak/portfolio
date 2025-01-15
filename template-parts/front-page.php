@@ -89,12 +89,6 @@
 
     <?php the_content(); ?>
 
-    <!-- Parallax Section -->
-
-    <section class="parallax-section" id="parallax-section">
-        <div class="overlay"></div>
-    </section>
-
     <!-- Projects Section -->
 
     <section class="projects-section" id="projects-section">

@@ -161,6 +161,22 @@ function fc_theme_child_register_blocks() {
 				'services'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'parallax',
+			'title' => 'Parallax',
+			'render_template' => 'template-parts/blocks/block-parallax.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'parallax'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -170,6 +186,7 @@ add_action('init', 'fc_theme_child_register_blocks');
 function fc_theme_child_allowed_block_types(){
 	$allowed_blocks = array(
 		'acf/about-me',
+		'acf/parallax',
 		'acf/services',
 		'acf/skills',
 		'core/block' 
