@@ -177,6 +177,24 @@ function fc_theme_child_register_blocks() {
 				'parallax'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'post-loop',
+			'title' => 'Post Loop',
+			'render_template' => 'template-parts/blocks/block-post-loop.php',
+			'category' => 'widget',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'post loop',
+				'post',
+				'loop'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -187,6 +205,7 @@ function fc_theme_child_allowed_block_types(){
 	$allowed_blocks = array(
 		'acf/about-me',
 		'acf/parallax',
+		'acf/post-loop',
 		'acf/services',
 		'acf/skills',
 		'core/block' 

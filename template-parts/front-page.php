@@ -89,45 +89,6 @@
 
     <?php the_content(); ?>
 
-    <!-- Projects Section -->
-
-    <section class="projects-section" id="projects-section">
-        <?php 
-        
-        $recent_posts = wp_get_recent_posts(array( 
-            'post_type' => 'projects',
-            'numberposts' => 6
-        ));
-        
-        ?>
-        <div class="projects-section-container">
-            <h2>Projekte</h2>
-            <div class="projects-content">
-                <?php 
-                
-                foreach($recent_posts as $posts) : 
-                    $img = get_the_post_thumbnail($posts['ID']);
-                    $excerpt = get_the_excerpt($posts['ID']);
-                
-                ?>
-                <div class="projects-content--inner">
-                    <div class="img-container img-container--contain lazy">
-                        <div class="img-container__inner">
-                            <?php echo $img; ?>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h3><?php echo $posts['post_title']; ?></h3>
-                        <p><?php echo $excerpt; ?></p>
-                        <a href="<?php get_permalink($posts['ID']) ?>" class="button button--primary">Zum Projekt</a>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-            <a href="/projects" class="button button--primary">Mehr anzeigen</a>
-        </div>
-    </section>
-
     <!-- Conditions Section -->
 
     <section class="conditions-section" id="conditions-section">
