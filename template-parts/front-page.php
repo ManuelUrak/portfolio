@@ -3,7 +3,7 @@
 
     <!-- Hero Section -->
 
-    <section class="hero-section">
+    <section class="hero-section"><!-- TODO: Make this section a seperate file -->
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-content--left">
