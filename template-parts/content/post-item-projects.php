@@ -1,11 +1,12 @@
-<a href="<?php the_permalink(); ?>" class="post-item-link no-style">
-    <div class="post-item-container">
-        <div class="post-item-container--inner">
-            <div class="img-container img-container--contain lazy">
-                <div class="img-container__inner">
-                    <?php get_the_post_thumbnail(); ?>
-                </div>
-            </div>
+<div class="projects-content--inner">
+    <div class="img-container img-container--contain lazy">
+        <div class="img-container__inner">
+            <?php the_post_thumbnail('medium'); ?>
         </div>
     </div>
-</a>
+    <div class="content">
+        <h3><?php echo the_title(); ?></h3>
+        <p><?php echo the_excerpt(); ?></p>
+        <a href="<?php echo the_permalink(); ?>" class="button button--primary">Zum Projekt</a>
+    </div>
+</div>
