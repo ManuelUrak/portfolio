@@ -182,7 +182,7 @@ function fc_theme_child_register_blocks() {
 			'name' => 'post-loop',
 			'title' => 'Post Loop',
 			'render_template' => 'template-parts/blocks/block-post-loop.php',
-			'category' => 'widget',
+			'category' => 'widgets',
 			'icon' => $block_icon,
 			'mode' => 'edit',
 			'supports' => array(
@@ -211,6 +211,56 @@ function fc_theme_child_register_blocks() {
 				'conditions'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'fc-image',
+			'title' => 'Image',
+			'render_template' => 'template-parts/blocks/fc-block-image.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'image'
+			)
+		));
+
+		acf_register_block_type(array(
+			'name' => 'fc-text',
+			'title' => 'Text',
+			'render_template' => 'template-parts/blocks/fc-block-text.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'text'
+			)
+		));
+
+		acf_register_block_type(array(
+			'name' => 'fc-button-link',
+			'title' => 'Button-Link',
+			'render_template' => 'template-parts/blocks/fc-block-button-link.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false 
+			),
+			'keywords' => array(
+				'button',
+				'link',
+				'button link'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -221,6 +271,9 @@ function fc_theme_child_allowed_block_types(){
 	$allowed_blocks = array(
 		'acf/about-me',
 		'acf/conditions',
+		'acf/fc-button-link',
+		'acf/fc-text',
+		'acf/fc-image',
 		'acf/parallax',
 		'acf/post-loop',
 		'acf/services',
