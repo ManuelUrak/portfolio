@@ -2,6 +2,12 @@
 
 //Breakpoints
 
+@mixin content{
+	@media only screen and (max-width: 1320px){
+		@content;
+	}
+}
+
 @mixin xl{
 	@media only screen and (min-width: 1320px){
 		@content;
@@ -353,6 +359,11 @@ section:not(.hero-section){
 		&--top{
 			padding: 20px 0 20px 0;
 
+			@include content{
+				display: flex;
+				justify-content: center;
+			}
+
 			.footer-logo{
 				width: 240px;
 
@@ -374,6 +385,11 @@ section:not(.hero-section){
 			display: flex;
 			justify-content: space-around;
 			padding-bottom: 10px;
+
+			@include m{
+				flex-direction: column;
+				align-items: center;
+			}
 
 			&--left{
 				.menu-footer_menu-container{
@@ -400,6 +416,10 @@ section:not(.hero-section){
 			&--right{
 				display: flex;
 				gap: 12px;
+
+				@include m{
+					display: none;
+				}
 
 				.data-left, .data-right{
 					display: flex;
