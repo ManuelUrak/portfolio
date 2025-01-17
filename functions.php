@@ -278,6 +278,23 @@ function fc_theme_child_register_blocks() {
 				'shortcode'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'fc-heading',
+			'title' => 'Heading',
+			'render_template' => 'template-parts/blocks/fc-block-heading.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false,
+				'className' => true
+			),
+			'keywords' => array(
+				'heading'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -289,6 +306,7 @@ function fc_theme_child_allowed_block_types(){
 		'acf/about-me',
 		'acf/conditions',
 		'acf/fc-button-link',
+		'acf/fc-heading',
 		'acf/fc-text',
 		'acf/fc-image',
 		'acf/fc-shortcode',
