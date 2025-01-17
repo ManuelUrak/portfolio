@@ -69,6 +69,10 @@ $(document).ready(function(){
         }
     })
 
+    //Add an ID the the contact-section
+
+    $('.contact-section').attr('id', 'contact-section');
+
 
 
 });
