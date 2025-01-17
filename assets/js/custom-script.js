@@ -133,6 +133,8 @@ jQuery(document).ready(function($){
     //Function that checks if an Element is scrolled into view
 
     function scrolledIntoView(elem){
+        if($(elem).length === 0) return false;
+
         let view_top = $(window).scrollTop();
         let view_bottom = view_top + $(window).height();
         let elem_top = $(elem).offset().top;
