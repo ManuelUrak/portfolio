@@ -261,6 +261,23 @@ function fc_theme_child_register_blocks() {
 				'button link'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'fc-shortcode',
+			'title' => 'Shortcode',
+			'render_template' => 'template-parts/blocks/fc-block-shortcode.php',
+			'category' => 'widgets',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false,
+				'classname' => true 
+			),
+			'keywords' => array(
+				'shortcode'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -274,6 +291,7 @@ function fc_theme_child_allowed_block_types(){
 		'acf/fc-button-link',
 		'acf/fc-text',
 		'acf/fc-image',
+		'acf/fc-shortcode',
 		'acf/parallax',
 		'acf/post-loop',
 		'acf/services',
