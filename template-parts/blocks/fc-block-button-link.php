@@ -3,7 +3,7 @@
     
     $link = get_field('block_button_link_link');
 
-    $link_title = $links['title'];
+    $link_title = $link['title'];
     $link_url = $link['url'];
     $link_target = $link['target'] ? $link['target'] : '_self';
     

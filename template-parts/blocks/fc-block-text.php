@@ -9,5 +9,5 @@
     );
     
     ?>
-    <p><?php echo wp_kses(get_field('block_text_text'), $allowed); ?></p>
+    <p><?php echo wp_kses(get_field('block_block_text'), $allowed); ?></p>
 </div>

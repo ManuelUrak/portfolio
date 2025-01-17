@@ -3,7 +3,7 @@
         <div class="img-container__inner">
         <?php 
                     
-        $imgsrc = get_field('block_image_image');
+        $imgsrc = get_field('block_block_image');
 
         printf(
             '<img loading="lazy" %s title="%s" alt="%s" />',
