@@ -39,6 +39,60 @@ jQuery(document).ready(function($){
         });
     });
 
+    //Lazy loading for images even on older browser versions
+
+    let lazyImages = $('.lazy img');
+    
+    function lazyLoadImages(){
+        lazyImages.each(function(){
+            if($(this).is(":visible") && $(this).offset().top <= $(window).scrollTop() + $(window).height()){
+                let src = $(this).data('src');
+                $(this).attr('src', src);
+                $(this).removeClass('lazy');
+            }
+        });
+    }
+
+    lazyLoadImages();
+
+    $(window).on('scroll', function(){
+        lazyLoadImages();
+    });
+
+    $('.lazy img').each(function(){
+        let src = $(this).attr('src');
+        $(this).attr('data-src', src);
+        $(this).attr('src', '');
+    });
+
+    //Add a grey background to the image container while the image is loading
+
+    let lazyContainers = $('.lazy');
+    let imagesTotal = lazyContainers.length;
+    let loadedImages = 0;
+
+    lazyContainers.css('background-color', '#22223B;');
+
+    lazyContainers.each(function(){
+        let $this = $(this);
+        let img = $this.find('img');
+
+        img.on('load', function(){
+            loadedImages++;
+
+            if(loadedImages === imagesTotal){
+                lazyContainers.css('background-color', 'transparent');
+            }
+        });
+
+        let src = img.data('src');
+
+        if(src){
+            img.attr('src', src);
+            img.removeClass('lazy');
+        }
+    });
+
     //Open or close mobile navigation
 
     let navtoggle = $('.navbar-toggle');

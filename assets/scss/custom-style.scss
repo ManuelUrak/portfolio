@@ -206,6 +206,22 @@ section:not(.hero-section){
 	}
 }
 
+//Lazy loading images
+
+.lazy{
+	background-color: $darkgrey;
+	transition: background-color 0.3s ease;
+
+	img{
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	img[src]{
+		opacity: 1;
+	}
+}
+
 /* HEADER */
 
 .header-container{
