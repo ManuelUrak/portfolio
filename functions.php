@@ -303,4 +303,23 @@ function fc_theme_child_allowed_block_types(){
 }
 add_filter('allowed_block_types_all', 'fc_theme_child_allowed_block_types', 10);
 
+// Add HTML for the Preloader into the head tag
+
+function add_preloader(){
+	echo '
+		<!-- Preloader -->
+
+		<div id="preloader">
+			<div class="preloader-image"></div>
+			<div class="loading-text">
+				Loading... <span id="progress-percentage">0%</span>
+			</div>
+			<div class="progress-bar">
+				<div class="progress"></div>
+			</div>
+		</div>
+	';
+}
+add_action('wp_footer', 'add_preloader');
+
 ?>

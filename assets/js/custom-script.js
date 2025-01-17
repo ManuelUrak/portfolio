@@ -1,5 +1,29 @@
 $(document).ready(function(){
 
+    //Preloader
+
+    let preloader = $('#preloader');
+    let progress = $('.progress-bar .progress');
+
+    let totalImages = $('img').length;
+    let imagesLoaded = 0;
+
+    $('img').each(function(){
+        $('<img>').on('load error', function(){
+            imagesLoaded++;
+            let percent = (imagesLoaded / totalImages) * 100;
+            progress.css('width', percent + '%');
+
+            $('.loading-text').text('Loading...' + Math.round(percent) + '%');
+
+            if(imagesLoaded === totalImages){
+                setTimeout(function(){
+                    preloader.fadeOut('slow');
+                }, 1000);
+            }
+        }).attr('src', $(this).attr('src'));
+    });
+
     //Open or close mobile navigation
 
     let navtoggle = $('.navbar-toggle');
