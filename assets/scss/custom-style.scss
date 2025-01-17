@@ -1385,3 +1385,76 @@ section:not(.hero-section){
 
 /* PLUGINS */
 
+//Contact form styles
+
+.contact-section{
+	background-image: url(../imgs/contact-background.png);
+	overflow-x: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+	width: 100% !important;
+	max-width: 99999px !important;
+	margin-top: 100px !important;
+
+	.contact-form{
+		margin: unset !important;
+		padding: 40px !important;
+
+		.wpforms-form{
+			.wpforms-field-container{
+				.wpforms-field{
+					input{
+						background: transparent;
+						color: $white;
+						border-color: $turkise;
+						border-radius: 0%;
+						width: 100%;
+						max-width: 100%;
+						display: block;
+
+						&::placeholder{
+							color: $grey;
+						}
+					}
+
+					textarea{
+						background: transparent;
+						color: $white;
+						border-color: $turkise;
+						border-radius: 0%;
+
+						&::placeholder{
+							color: $grey;
+						}
+					}
+				}
+			}
+
+			.wpforms-submit-container{
+				.button{
+					padding: 10px 50px;
+					font-size: 20px;
+					color: $white;
+					text-decoration: none;
+					text-transform: uppercase;
+				
+					&--primary{
+						background-color: #3a0ca3;
+						box-shadow: inset 15px 15px 40px #00bfe7, inset -120px -10px 40px #00bfe7;
+				
+						&:hover{
+							background: transparent;
+							border: 1px solid $white;
+							box-shadow: unset;
+							transition: all .5s ease-in-out;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
