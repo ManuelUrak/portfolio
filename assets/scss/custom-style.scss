@@ -1344,5 +1344,44 @@ section:not(.hero-section){
 	margin-top: 50px;
 }
 
+//Single Projects
+
+.single-projects-section{
+	padding-top: 150px;
+
+	.single-title{
+		color: $white;
+		text-align: center;
+	}
+
+	.block-image{
+		width: 100%;
+		max-width: 1320px;
+		padding: 50px 0 50px 0;
+
+		.img-container{
+			width: 100%;
+
+			&__inner{
+				width: 100%;
+
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.block-text{
+		p{
+			color: $white;
+		}
+	}
+
+	.block-button-link{
+		padding: 50px 0 50px 0;
+	}
+}
+
 /* PLUGINS */
 
