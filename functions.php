@@ -272,7 +272,7 @@ function fc_theme_child_register_blocks() {
 			'supports' => array(
 				'align' => false,
 				'mode' => false,
-				'classname' => true 
+				'className' => true
 			),
 			'keywords' => array(
 				'shortcode'
