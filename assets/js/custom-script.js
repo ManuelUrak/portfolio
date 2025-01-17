@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
     //Preloader
 
@@ -22,6 +22,21 @@ $(document).ready(function(){
                 }, 1000);
             }
         }).attr('src', $(this).attr('src'));
+    });
+
+    //Smooth scroll behaviour for anchor tags corresponding to a section on the page
+
+    $('a[href^="#"]').on('click', function(e){
+        e.preventDefault();
+
+        let target = this.hash;
+        let $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 800, 'swing', function(){
+            window.location.hash = target;
+        });
     });
 
     //Open or close mobile navigation

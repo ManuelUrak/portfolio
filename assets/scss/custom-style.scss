@@ -129,6 +129,10 @@ body{
 
 //Page Default Styles
 
+html{
+	scroll-behavior: smooth;
+}
+
 .site-main{
 	max-width: 1320px;
 	margin: auto;
