@@ -1453,6 +1453,18 @@ section:not(.hero-section){
 	}
 }
 
+// fc-block-heading styles
+
+.block-heading{
+	margin-top: 100px;
+
+	&--heading{
+		color: $white;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
 /* PLUGINS */
 
 //Contact form styles
