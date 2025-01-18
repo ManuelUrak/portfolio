@@ -2,7 +2,7 @@
     <div class="archive-projects--title">
         <h1><?php echo 'Projekte'; ?></h1>
     </div>
-    <div class="archive-projects--container projects-content">
+    <section class="archive-projects--container projects-content">
         <?php 
         if(have_posts()){
             while(have_posts()){
@@ -11,5 +11,5 @@
             }
         }
         ?>
-    </div>
+    </section>
 </main>
