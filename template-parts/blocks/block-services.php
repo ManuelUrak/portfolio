@@ -6,7 +6,7 @@
         <div class="services-content">
             <?php while(have_rows('block_services')) : the_row(); ?>
             <div class="services-content--inner">
-                <div class="img-container img-container--contain lazy">
+                <div class="img-container img-container--contain">
                     <div class="img-container__inner">
                             <?php 
                                 
