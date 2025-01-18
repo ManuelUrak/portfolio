@@ -297,7 +297,7 @@ section:not(.hero-section){
 				display: none;
 			}
 
-			.menu-main_menu-container{
+			.menu-main-menu-container{
 				.main-menu{
 					display: flex;
 					flex-direction: row;
@@ -346,7 +346,7 @@ section:not(.hero-section){
 		transition: max-height .5s ease-in-out;
 		transition: opacity .5s ease-in-out;
 
-		.menu-main_menu-container{
+		.menu-main-menu-container{
 			display: none;
 		}
 
@@ -383,7 +383,7 @@ section:not(.hero-section){
 				top: 119.5px;
 			}
 
-			.menu-main_menu-container{
+			.menu-main-menu-container{
 				display: block;
 
 				.mobile-menu{

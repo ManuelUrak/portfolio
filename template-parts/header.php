@@ -24,7 +24,8 @@
             <?php 
             
             wp_nav_menu(array(
-                'menu' => 'main_menu',
+                'menu' => 'main-menu',
+                'theme_location' => 'main-menu',
                 'menu_class' => 'main-menu'
             ));
             
@@ -36,7 +37,8 @@
         <?php 
             
         wp_nav_menu(array( 
-            'menu' => 'main_menu',
+            'menu' => 'main-menu',
+            'theme_location' => 'main-menu',
             'menu_class' => 'mobile-menu'
         ));
             
