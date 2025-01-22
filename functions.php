@@ -366,4 +366,19 @@ function add_language_switcher_to_menu($items, $args){
 }
 add_filter('wp_nav_menu_items', 'add_language_switcher_to_menu', 10, 2);
 
+//Integrate menu container class consistency for different menus, so additional styling can be avoided
+
+function force_menu_class_consistency($nav_menu, $args){
+	if(in_array($args -> theme_location, ['main-menu', 'main-menu-english'])){
+		$nav_menu = preg_replace(
+			'/<div class="[^"]*menu-[^"]*-container"/',
+			'<div class="menu-main-menu-container"',
+			$nav_menu
+		);
+	}
+
+	return $nav_menu;
+}
+add_filter('wp_nav_menu', 'force_menu_class_consistency', 10, 2);
+
 ?>
