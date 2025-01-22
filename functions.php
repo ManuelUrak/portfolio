@@ -295,6 +295,23 @@ function fc_theme_child_register_blocks() {
 				'heading'
 			)
 		));
+
+		acf_register_block_type(array(
+			'name' => 'portfolio-hero',
+			'title' => 'Hero',
+			'render_template' => 'template-parts/blocks/portfolio-block-hero.php',
+			'category' => 'design',
+			'icon' => $block_icon,
+			'mode' => 'edit',
+			'supports' => array(
+				'align' => false,
+				'mode' => false,
+				'className' => true
+			),
+			'keywords' => array(
+				'hero'
+			)
+		));
     } 
 }
 add_action('init', 'fc_theme_child_register_blocks'); 
@@ -310,6 +327,7 @@ function fc_theme_child_allowed_block_types(){
 		'acf/fc-text',
 		'acf/fc-image',
 		'acf/fc-shortcode',
+		'acf/portfolio-hero',
 		'acf/parallax',
 		'acf/post-loop',
 		'acf/services',
