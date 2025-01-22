@@ -461,7 +461,7 @@ section:not(.hero-section){
 			}
 
 			&--left{
-				.menu-footer_menu-container{
+				.menu-main-menu-container{
 					.footer-menu{
 						margin: unset;
 						padding: unset;
@@ -477,6 +477,10 @@ section:not(.hero-section){
 									color: $turkise;
 								}
 							}
+						}
+
+						.lang-item{
+							display: none;
 						}
 					}
 				}

@@ -361,7 +361,7 @@ add_action('wp_footer', 'add_preloader');
 //Integrate a language switcher in the main menu
 
 function add_language_switcher_to_menu($items, $args){
-	if(isset($args -> theme_location) && $args -> theme_location == 'main-menu' && function_exists('pll_current_language')){
+	if(isset($args -> theme_location) && $args -> theme_location === 'main-menu' && function_exists('pll_current_language')){
 		ob_start();
 
 		$languages = pll_the_languages(array(
@@ -387,7 +387,7 @@ add_filter('wp_nav_menu_items', 'add_language_switcher_to_menu', 10, 2);
 //Integrate menu container class consistency for different menus, so additional styling can be avoided
 
 function force_menu_class_consistency($nav_menu, $args){
-	if(in_array($args -> theme_location, ['main-menu', 'main-menu-english'])){
+	if(in_array($args -> theme_location, ['main-menu', 'main-menu-english', 'footer_menu', 'footer_menu_english'])){
 		$nav_menu = preg_replace(
 			'/<div class="[^"]*menu-[^"]*-container"/',
 			'<div class="menu-main-menu-container"',
