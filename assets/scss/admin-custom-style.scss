@@ -1,0 +1,56 @@
+
+
+//Include custom-styles file to get mixins and variables
+
+@import 'custom-style';
+
+//Login Panel styles
+
+body{
+    font-family: $font;
+
+    &.login{
+        background: $purple;
+    }
+
+    #login{
+        .wp-login-logo{
+            a{
+                background-image: url(../imgs/cat.png);
+                background-repeat: no-repeat;
+                background-size: 85px;
+                background-position: center;
+                filter: drop-shadow(0px 0px 9px $white);
+            }
+        }
+
+        .notice{
+            border: 1px solid $turkise;
+            border-radius: 10px;
+            background: $black;
+
+            p{
+                text-align: center;
+                color: $white;
+            }
+        }
+
+        #loginform{
+            border: 1px solid $turkise;
+            border-radius: 10px;
+            background: $black;
+
+            p{
+                label{
+                    color: $white;
+                }
+
+                input{
+                    border: 1px solid $turkise;
+                    border-radius: 10px;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

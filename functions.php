@@ -27,8 +27,13 @@ function fc_theme_child_enqueue_admin_scripts_styles() {
 	wp_enqueue_script( 'fc_theme-admin-custom-script', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/admin-custom-script.js', array(
 		'jquery'
 	), fc_theme_child_version(), true );
+
+	if(is_login()){
+		wp_enqueue_style('fc_theme_login_custom_style', trailingslashit(get_stylesheet_directory_uri()) . 'assets/css/admin-custom-styles.css', array(), fc_theme_child_version(), 'all');
+	}
 }
 add_action( 'admin_enqueue_scripts', 'fc_theme_child_enqueue_admin_scripts_styles', 20 );
+add_action('login_enqueue_scripts', 'fc_theme_child_enqueue_admin_scripts_styles', 20);
 
 // Enqueue child theme scripts & styles
 
