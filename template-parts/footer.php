@@ -35,7 +35,7 @@
             <div class="footer-content--main--right">
                 <div class="data-left">
                     <?php while(have_rows('footer_address_data', 'option')) : the_row(); ?>
-                    <span><?php echo esc_html(get_sub_field('label')); ?></span>
+                    <span><?php echo esc_html(pll__(get_sub_field('label'))); ?></span>
                     <?php endwhile; ?>
                 </div>
                 <div class="data-right">

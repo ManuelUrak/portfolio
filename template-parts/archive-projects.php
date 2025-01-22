@@ -1,6 +1,6 @@
 <main class="site-main" id="site-main">
     <div class="archive-projects--title">
-        <h1><?php echo 'Projekte'; ?></h1>
+        <h1><?php echo pll__('Projekte'); ?></h1>
     </div>
     <section class="archive-projects--container projects-content">
         <?php 

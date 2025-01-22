@@ -384,6 +384,26 @@ function add_language_switcher_to_menu($items, $args){
 }
 add_filter('wp_nav_menu_items', 'add_language_switcher_to_menu', 10, 2);
 
+//Register ACF fields for translation
+
+function register_acf_strings_for_translation(){
+	if(have_rows('footer_address_data', 'option')){
+		while(have_rows('footer_address_data', 'option')){
+			the_row();
+			$label = get_sub_field('label');
+			pll_register_string('address_label_' . $label, $label, 'Address Labels');
+		}
+	}
+}
+add_action('init', 'register_acf_strings_for_translation');
+
+//Register hardcoded strings for translation
+
+function register_hardcoded_strings_for_translation(){
+	pll_register_string('archive_projects_heading', 'Projekte', 'archive-projects', true);
+}
+add_action('init', 'register_hardcoded_strings_for_translation');
+
 //Integrate menu container class consistency for different menus, so additional styling can be avoided
 
 function force_menu_class_consistency($nav_menu, $args){
