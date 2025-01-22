@@ -358,32 +358,6 @@ function add_preloader(){
 }
 add_action('wp_footer', 'add_preloader');
 
-//Integrate a language switcher in the main menu
-
-function add_language_switcher_to_menu($items, $args){
-	if(isset($args -> theme_location) && $args -> theme_location === 'main-menu' && function_exists('pll_current_language')){
-		ob_start();
-
-		$languages = pll_the_languages(array(
-			'dropdown' => 0,
-			'show_flags' => 1,
-			'show_names' => 0
-		));
-		$languages = ob_get_clean();
-
-		if(!empty($languages)){
-			$language_items = '<li class="menu-item menu-item-language-switcher">';
-			$language_items .= $languages;
-			$language_items .= '</li>';
-
-			$items = $language_items . $items;
-		}
-	}
-
-	return $items;
-}
-add_filter('wp_nav_menu_items', 'add_language_switcher_to_menu', 10, 2);
-
 //Register ACF fields for translation
 
 function register_acf_strings_for_translation(){
