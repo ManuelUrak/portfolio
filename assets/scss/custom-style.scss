@@ -1314,7 +1314,7 @@ section:not(.hero-section){
 		.conditions-content{
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
+			flex-wrap: wrap;		
 
 			@include l{
 				flex-direction: column;
@@ -1333,6 +1333,11 @@ section:not(.hero-section){
 				width: 40%;
 				max-width: 600px;
 				padding: 40px;
+
+				&:only-child{
+					margin: auto;
+					flex: 0 1 auto;
+				}
 
 				@include l{
 					margin-bottom: 50px;

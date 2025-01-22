@@ -2,7 +2,7 @@
 
 //Prevent direct access to the file
 
-if ( !defined( 'ABSPATH' ) ) {
+if(!defined( 'ABSPATH')){
 	exit;
 }
 
@@ -339,7 +339,7 @@ function fc_theme_child_allowed_block_types(){
 }
 add_filter('allowed_block_types_all', 'fc_theme_child_allowed_block_types', 10);
 
-// Add HTML for the Preloader into the head tag
+// Add HTML for the Preloader into the footer tag
 
 function add_preloader(){
 	echo '
