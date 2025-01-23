@@ -51,6 +51,56 @@ body{
                     background: transparent;
                 }
             }
+
+            .user-pass-wrap{
+                label{
+                    color: $white;
+                }
+
+                .wp-pwd{
+                    input{
+                        border: 1px solid $turkise;
+                        border-radius: 10px;
+                        background: transparent; 
+                    }
+                }
+            }
+
+            .submit{
+                .button{
+                    padding: 0 10px;
+                    font-size: 13px;
+                    color: $white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                
+                    &-primary{
+                        background-color: #3a0ca3;
+                        box-shadow: inset 15px 15px 40px #00bfe7, inset -120px -10px 40px #00bfe7;
+                
+                        &:hover{
+                            background: transparent;
+                            border: 1px solid $white;
+                            box-shadow: unset;
+                            transition: all .5s ease-in-out;
+                        }
+                    }
+                }
+            }
         }
+
+        #nav{
+            a{
+                color: $white;
+            }
+        }
+
+        #backtoblog{
+            display: none;
+        }
+    }
+
+    .language-switcher{
+        display: none;
     }
 }
