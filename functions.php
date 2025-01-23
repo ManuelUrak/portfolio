@@ -399,5 +399,3 @@ function force_menu_class_consistency($nav_menu, $args){
 	return $nav_menu;
 }
 add_filter('wp_nav_menu', 'force_menu_class_consistency', 10, 2);
-
-?>
