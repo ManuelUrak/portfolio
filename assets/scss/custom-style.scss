@@ -1504,3 +1504,19 @@ section:not(.hero-section){
 	}
 }
 
+#moove_gdpr_cookie_info_bar{
+	background-color: $black !important;
+	border: 1px solid $turkise !important;
+
+	.moove-gdpr-info-bar-container{
+		.moove-gdpr-info-bar-content{
+			.moove-gdpr-cookie-notice{
+				p{
+					font-size: 16px;
+					font-family: $font;
+				}
+			}
+		}
+	}
+}
+
