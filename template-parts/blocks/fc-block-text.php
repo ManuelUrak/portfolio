@@ -5,7 +5,12 @@
         'a' => array(
             'href' => array()
         ),
-        'br' => array()
+        'br' => array(),
+        'h2' => array(),
+        'h3' => array(),
+        'p' => array(),
+        'ul' => array(),
+        'li' => array()
     );
     
     ?>
