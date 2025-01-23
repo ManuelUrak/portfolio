@@ -1,3 +1,4 @@
 .vscode/sftp.conf
 .vscode/sftp.json
 wp-stubs.php
+stubs.php
