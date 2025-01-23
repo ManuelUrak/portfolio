@@ -1,4 +1,4 @@
-
+/* Stylesheet for admin styles */
 
 //Include custom-styles file to get mixins and variables
 
@@ -102,5 +102,72 @@ body{
 
     .language-switcher{
         display: none;
+    }
+}
+
+//Admin Dashboard styles
+
+body{
+    font-family: $font;
+
+    &.wp-admin{
+        background: $white;
+    }
+
+    #wpwrap{
+        #adminmenumain{
+            #adminmenuback{
+                background: $purple;
+            }
+
+            #adminmenuwrap{
+                background: $purple;
+
+                #adminmenu{
+                    background: $purple;
+
+                    li{
+                        a{
+                            color: $white;
+                            text-transform: uppercase;
+
+                            .wp-menu-image{
+                                &::before{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #wpcontent{
+            #wpadminbar{
+                background: $purple;
+
+                .quicklinks{
+                    .ab-top-menu{
+                        .menupop#wp-admin-bar-wp-logo{
+                            .ab-item{
+                                .ab-icon{
+                                    &::before{
+                                        content: '';
+                                        background-image: url(../imgs/cat.png);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 20px;
+                                        width: 20px;
+                                        height: 20px;
+                                        display: block;
+                                        filter: drop-shadow(0 0 10px $white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
