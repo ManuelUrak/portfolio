@@ -378,6 +378,10 @@ add_action('init', 'register_acf_strings_for_translation');
 
 function register_hardcoded_strings_for_translation(){
 	pll_register_string('archive_projects_heading', 'Projekte', 'archive-projects', true);
+	pll_register_string('404_heading','Diese Seite existiert nicht!', '404', true);
+	pll_register_string('404_subheading', 'Kehren sie zur Startseite zurück...', '404', true);
+	pll_register_string('404_link_href', '/#', '404', true);
+	pll_register_string('404_link_title', 'Zur Startseite','404', true);
 }
 add_action('init', 'register_hardcoded_strings_for_translation');
 

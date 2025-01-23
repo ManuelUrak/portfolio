@@ -1417,6 +1417,30 @@ section:not(.hero-section){
 	}
 }
 
+//404 styles
+
+.not-found-section{
+	padding: 250px 0 250px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h1{
+		text-align: center;
+		color: $white;
+	}
+
+	img{
+		max-width: 400px;
+		width: 100%;
+	}
+
+	h2{
+		color: $white;
+		text-align: center;
+	}
+}
+
 // fc-block-heading styles
 
 .block-heading{
