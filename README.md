@@ -8,13 +8,13 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
 ## Changelog
 
-[1.0.0] - 2025-01-23
-
-    Initial release.
-
 [1.0.1] - 2025-01-27
 
     Fixed a bug that prevented the fonts from loading due though an invalid https request.
+
+[1.0.0] - 2025-01-23
+
+    Initial release.
 
 ## Features
 
