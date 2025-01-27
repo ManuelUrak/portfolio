@@ -12,6 +12,10 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
     Initial release.
 
+[1.0.1] - 2025-01-27
+
+    Fixed a bug that prevented the fonts from loading due though an invalid https request.
+
 ## Features
 
 - Custom-built WordPress theme.
@@ -22,8 +26,11 @@ The website also utilizes several WordPress plugins to enhance functionality and
 ## Installation
 
 1. Clone or download this repository to your local machine:
+
    ```bash
    git clone https://github.com/ManuelUrak/portfolio.git
+
+   ```
 
 2. Install WordPress on your local environment (e.g., using Local by Flywheel, MAMP, XAMPP, or Vagrant).
 3. Install the fc-theme. https://github.com/ManuelUrak/fc-theme.git
