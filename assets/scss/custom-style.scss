@@ -1434,9 +1434,11 @@ section:not(.hero-section) {
     width: 100%;
     max-width: 1320px;
     padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
 
     .img-container {
-      width: 100%;
+      width: 50%;
 
       &__inner {
         width: 100%;
