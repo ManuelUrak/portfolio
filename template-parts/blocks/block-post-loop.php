@@ -23,21 +23,23 @@ $numberposts = get_field('block_post_loop_numberposts');
                 
             foreach($recent_posts as $posts) : 
                 $img = get_the_post_thumbnail($posts['ID']);
-                $excerpt = get_the_excerpt($posts['ID']);
+                $excerpt = esc_html(get_the_excerpt($posts['ID']));
                 
             ?>
-            <div class="projects-content--inner">
-                <div class="img-container img-container--contain lazy">
-                    <div class="img-container__inner">
-                        <?php echo $img; ?>
+            <a href="<?php echo esc_url(get_permalink($posts['ID'])); ?>" class="no-style">
+                <div class="projects-content--inner">
+                    <div class="img-container img-container--contain lazy">
+                        <div class="img-container__inner">
+                            <?php echo $img; ?>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3><?php echo $posts['post_title']; ?></h3>
+                        <p><?php echo $excerpt; ?></p>
+                        <span class="button button--primary">Zum Projekt</span>
                     </div>
                 </div>
-                <div class="content">
-                    <h3><?php echo $posts['post_title']; ?></h3>
-                    <p><?php echo $excerpt; ?></p>
-                    <a href="<?php get_permalink($posts['ID']) ?>" class="button button--primary">Zum Projekt</a>
-                </div>
-            </div>
+            </a>
             <?php endforeach; ?>
         </div>
         <a href="/projects" class="button button--primary">Mehr anzeigen</a>
