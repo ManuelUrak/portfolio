@@ -8,9 +8,17 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
 ## Changelog
 
+[1.0.2] - 2025-02-03
+
+    Fixed an UI bug in the post-loop-block.
+    Fixed a bug that linked the items in the post-loop-block incorrectly.
+    Fixed a bug that made the buttons jump a bit when hovering over them.
+    The Image on the single-projects pages is now smaller.
+    Added custom meta keywords for better SEO.
+
 [1.0.1] - 2025-01-27
 
-    Fixed a bug that prevented the fonts from loading due though an invalid https request.
+    Fixed a bug that prevented the fonts from loading due to an invalid https request.
 
 [1.0.0] - 2025-01-23
 
