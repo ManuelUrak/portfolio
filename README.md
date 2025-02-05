@@ -8,6 +8,11 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
 ## Changelog
 
+[1.0.3] - 2025-02-05
+
+    Fixed an UI bug in the post-item at the projects-archive.
+    Changed HTML structure of the post-item to increase UX.
+
 [1.0.2] - 2025-02-03
 
     Fixed an UI bug in the post-loop-block.
