@@ -1389,7 +1389,10 @@ section:not(.hero-section) {
 
     .img-container {
       max-width: 400px;
-      max-height: 400px;
+      max-height: 240px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
 
       &__inner {
         width: 100%;
@@ -1397,6 +1400,7 @@ section:not(.hero-section) {
         img {
           width: 100%;
           height: 100%;
+          object-fit: contain;
         }
       }
     }
