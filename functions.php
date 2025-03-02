@@ -248,24 +248,6 @@ function fc_theme_child_register_blocks() {
 		));
 
 		acf_register_block_type(array(
-			'name' => 'fc-button-link',
-			'title' => 'Button-Link',
-			'render_template' => 'template-parts/blocks/fc-block-button-link.php',
-			'category' => 'design',
-			'icon' => $block_icon,
-			'mode' => 'edit',
-			'supports' => array(
-				'align' => false,
-				'mode' => false 
-			),
-			'keywords' => array(
-				'button',
-				'link',
-				'button link'
-			)
-		));
-
-		acf_register_block_type(array(
 			'name' => 'fc-shortcode',
 			'title' => 'Shortcode',
 			'render_template' => 'template-parts/blocks/fc-block-shortcode.php',

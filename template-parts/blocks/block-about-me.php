@@ -12,12 +12,14 @@
                             
                         $imgsrc = get_field('block_about_me_image');
 
-                        printf(
+                        /*printf(
                             '<img loading="lazy" %s title="%s" alt="%s" />',
                             fc_theme_responsive_image($imgsrc, 'medium', '350px'),
                             esc_attr(get_the_title($imgsrc )),
                             esc_attr(get_post_meta($imgsrc, '_wp_attachment_image_alt', true))
-                        );
+                        );*/
+
+                        echo fc_theme_render_image($imgsrc);
                             
                         ?>
                     </div>
