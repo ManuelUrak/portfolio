@@ -8,6 +8,10 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
 ## Changelog
 
+[1.0.4] - 2025-03-02
+
+    Deleted certain blocks since they will be served by the parent theme from now on and are therefore deprecated.
+
 [1.0.3] - 2025-02-05
 
     Fixed an UI bug in the post-item at the projects-archive.
