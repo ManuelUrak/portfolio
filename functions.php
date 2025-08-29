@@ -244,6 +244,7 @@ function fc_theme_child_allowed_block_types(){
 		'acf/fc-button-link',
 		'acf/fc-heading',
 		'acf/fc-text',
+		'acf/fc-text-image',
 		'acf/fc-image',
 		'acf/fc-shortcode',
 		'acf/portfolio-hero',

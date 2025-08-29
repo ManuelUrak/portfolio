@@ -8,6 +8,10 @@ The website also utilizes several WordPress plugins to enhance functionality and
 
 ## Changelog
 
+[1.0.5] - 2025-08-29
+
+    Imported default-styles from the parent theme
+
 [1.0.4] - 2025-03-02
 
     Deleted certain blocks since they will be served by the parent theme from now on and are therefore deprecated.
